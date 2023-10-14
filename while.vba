@@ -7,7 +7,7 @@ Sub While1()
     Dim intx, inty, intz, Counter, Down As Integer
     x = 16
     y = 6
-    n = 2 '19
+    n = 2 '19 = 20 -1
     Counter = 0 'Initialize counter
         ActiveCell.Range("A1:E14").Select 'Select A1 to E14
         Application.CutCopyMode = False 'Cancel all cut, copy previously
@@ -38,5 +38,5 @@ Sub While1()
         'ActiveWindow.SmallScroll Down:=9
         ActiveCell.Offset(0, 6).Range("A1:Q3").Select ' 20 = n + 1
         Selection.Copy
-        'ActiveWindow.SmallScroll Down:=310
+        'ActiveWindow.SmallScroll Down:=16(n + 1)
 End Sub
