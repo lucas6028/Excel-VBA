@@ -1,11 +1,13 @@
-Sub while()
+Sub While1()
 '
 'while 巨集
-'快速鍵 Ctrl+w
+'快速鍵 Ctrl+shift+W
+'註記為一次20筆原始值
 '
     Dim intx, inty, intz, Counter, Down As Integer
     x = 16
     y = 6
+    n = 2 '19
     Counter = 0 'Initialize counter
         ActiveCell.Range("A1:E14").Select 'Select A1 to E14
         Application.CutCopyMode = False 'Cancel all cut, copy previously
@@ -15,7 +17,7 @@ Sub while()
             False, Transpose:=True 'Only transpose it
         ' The first data is finish
 
-    While Counter < 20
+    While Counter < n
         Counter = Counter + 1 'Increment counter
         'ActiveWindow.SmallScroll Down:=9 
         ActiveCell.Offset(x, -6).Range("A1:E14").Select
@@ -27,14 +29,14 @@ Sub while()
             False, Transpose:=True
         x = x + 15
     Wend 'End of while loop
-        ActiveWindow.SmallScroll Down:=-12
-        ActiveCell.Offset(-19, -6).Range("A1:E318").Select
+        'ActiveWindow.SmallScroll Down:=-12
+        ActiveCell.Offset(-n, -6).Range("A1:E46").Select '318 = 16(n + 1) - 2
         With Selection.Font
             .Color = -16776961 'Color red
             .TintAndShade = 0
         End With
-        ActiveWindow.SmallScroll Down:=9
-        ActiveCell.Offset(0, 6).Range("A1:Q20").Select
+        'ActiveWindow.SmallScroll Down:=9
+        ActiveCell.Offset(0, 6).Range("A1:Q3").Select ' 20 = n + 1
         Selection.Copy
-        ActiveWindow.SmallScroll Down:=310
+        'ActiveWindow.SmallScroll Down:=310
 End Sub
