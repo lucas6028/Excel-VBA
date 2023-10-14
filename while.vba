@@ -4,9 +4,8 @@ Sub While1()
 '快速鍵 Ctrl+shift+W
 '註記為一次20筆原始值
 '
-    Dim intx, inty, intz, Counter, Down As Integer
+    Dim intx, Counter, n  As Integer
     x = 16
-    y = 6
     n = 2 '19 = 20 -1
     Counter = 0 'Initialize counter
         ActiveCell.Range("A1:E14").Select 'Select A1 to E14
