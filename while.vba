@@ -4,7 +4,7 @@ Sub While1()
 '快速鍵 Ctrl+shift+W
 '註記為一次20筆原始值
 '
-    Dim intx, Counter, n  As Integer
+    Dim x, Counter, n  As Integer
     x = 16
     n = 2 '19 = 20 -1
     Counter = 0 'Initialize counter
