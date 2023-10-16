@@ -7,7 +7,7 @@ Sub While1()
 '
     Dim x, Counter, n  As Integer
     x = 16
-    n = 2 ' Modify here !! 19 = 20 -1
+    n = 2 ' Modify n !! 19 = 20 -1
     Counter = 0 'Initialize counter
         ActiveCell.Range("A1:E14").Select 'Select A1 to E14
         Application.CutCopyMode = False 'Cancel all cut, copy previously
@@ -30,13 +30,13 @@ Sub While1()
         x = x + 15
     Wend 'End of while loop
         'ActiveWindow.SmallScroll Down:=-12
-        ActiveCell.Offset(-n, -6).Range("A1:E46").Select ' Modify here !! 318 = 16(n + 1) - 2
+        ActiveCell.Offset(-n, -6).Range("A1:E46").Select ' Modify E !! 318 = 16(n + 1) - 2
         With Selection.Font
             .Color = -16776961 'Color red
             .TintAndShade = 0
         End With
         'ActiveWindow.SmallScroll Down:=9
-        ActiveCell.Offset(0, 6).Range("A1:Q3").Select ' Modify here !! 20 = n + 1
+        ActiveCell.Offset(0, 6).Range("A1:Q3").Select ' Modify Q !! 20 = n + 1
         Selection.Copy
         'ActiveWindow.SmallScroll Down:=16(n + 1)
 End Sub
