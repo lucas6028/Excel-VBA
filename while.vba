@@ -38,5 +38,5 @@ Sub While1()
         'ActiveWindow.SmallScroll Down:=9
         ActiveCell.Offset(0, 6).Range("A1:Q3").Select ' Modify Q !! 20 = n + 1
         Selection.Copy
-        'ActiveWindow.SmallScroll Down:=16(n + 1)
+        ActiveWindow.SmallScroll Down:=16 * n
 End Sub
